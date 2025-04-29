@@ -1,0 +1,6 @@
+Aufgabe 1:
+Man benötigt immer nur ein Register. Bei einer linearen Tabelle benötigt man die Page Table im Register, bei einem 2-Level-Table muss man nur das Page Directory im Register. Bei mehr leveln benötigt man auch immer nur ein Register für das oberste Directory. Auf die anderen Directories wird ja im obersten verwiesen.
+
+Aufgabe 3:
+
+Es kommt am Anfang sehr oft zu Cache Misses, da die Page Tables zu groß und zu weit verteilt sind. Sobald aber eine Übersetzung in den Cache geladen ist und vom Programm genutzt wird, kommt es häufig zu Cache hits.
