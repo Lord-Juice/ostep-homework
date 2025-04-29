@@ -148,3 +148,8 @@ Virtual Address Trace
   VA 0x00004d8f (decimal:    19855) --> PA or invalid address?
   VA 0x00004dab (decimal:    19883) --> PA or invalid address?
   VA 0x00004a64 (decimal:    19044) --> PA or invalid address?
+
+================= Aufgabe 4 ========================
+Error in argument: address space must be a multiple of the pagesize
+Error: physical memory size must be GREATER than address space size (for this simulation)
+Error: must use smaller sizes (less than 1 GB) for this simulation.
