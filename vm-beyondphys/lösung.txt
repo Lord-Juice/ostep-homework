@@ -1,0 +1,66 @@
+Aufgabe 1
+Die Spalte us unter cpu (user time) erhöht sich von 0 auf 5 bis 7
+
+Aufgabe 2
+Wenn das Programm gestartet wird, verringert sich der free memory von 4730000 zu 3640000
+swpd bleibt gleich. Sobald das Programm gestoppt wird, geht free wieder hoch auf 4670000. Der freie speicher wird immer um etwa 1000000 Byte verringert oder vergrößert, was sinn ergibt, da 1024 MB allokiert werden.
+swpd bleibt gleich.
+
+Aufgabe 3
+At 4000, 5000 and 6000 si changes but so stays almost always 0, but changes when the process is terminated
+The Loops also speed up with longer runtime (as all pages required are loaded)
+At 8000 and beyond, so changes for some time until the process is killed.
+
+Aufgabe 4
+At the CPU column user column increases and sy also. wa decreases
+At the IO column bi increases however bo seems to not be influenced
+
+Aufgabe 5
+4000MB:
+Loop 0: 6 seconds
+Loop 1: 1 second
+Loop 2: <1 second
+
+Bandwidth increases
+
+12000MB: Killed after 17 seconds
+
+Output timer plot: root@d16272932e49:/home/pocketlab/ostep-homework/vm-beyondphys# python3 timer.py ./mem 4000 --loops 30 --output times.png
+allocating 4194304000 bytes (4000.00 MB)
+  number of integers in array: 1048576000
+loop 0 in 5187.98 ms (bandwidth: 771.01 MB/s)
+loop 1 in 3950.31 ms (bandwidth: 1012.58 MB/s)
+loop 2 in 3443.01 ms (bandwidth: 1161.77 MB/s)
+loop 3 in 1461.68 ms (bandwidth: 2736.58 MB/s)
+loop 4 in 926.03 ms (bandwidth: 4319.49 MB/s)
+loop 5 in 868.19 ms (bandwidth: 4607.30 MB/s)
+loop 6 in 877.67 ms (bandwidth: 4557.52 MB/s)
+loop 7 in 873.15 ms (bandwidth: 4581.09 MB/s)
+loop 8 in 905.57 ms (bandwidth: 4417.11 MB/s)
+loop 9 in 866.02 ms (bandwidth: 4618.81 MB/s)
+loop 10 in 886.13 ms (bandwidth: 4514.01 MB/s)
+loop 11 in 845.58 ms (bandwidth: 4730.49 MB/s)
+loop 12 in 861.82 ms (bandwidth: 4641.36 MB/s)
+loop 13 in 870.03 ms (bandwidth: 4597.52 MB/s)
+loop 14 in 869.50 ms (bandwidth: 4600.36 MB/s)
+loop 15 in 838.65 ms (bandwidth: 4769.59 MB/s)
+loop 16 in 868.60 ms (bandwidth: 4605.09 MB/s)
+loop 17 in 864.38 ms (bandwidth: 4627.62 MB/s)
+loop 18 in 883.25 ms (bandwidth: 4528.72 MB/s)
+loop 19 in 836.49 ms (bandwidth: 4781.86 MB/s)
+loop 20 in 874.05 ms (bandwidth: 4576.40 MB/s)
+loop 21 in 858.22 ms (bandwidth: 4660.79 MB/s)
+loop 22 in 876.26 ms (bandwidth: 4564.84 MB/s)
+loop 23 in 867.57 ms (bandwidth: 4610.56 MB/s)
+loop 25 in 881.86 ms (bandwidth: 4535.86 MB/s)
+loop 26 in 891.17 ms (bandwidth: 4488.48 MB/s)
+loop 27 in 870.18 ms (bandwidth: 4596.74 MB/s)
+loop 28 in 864.35 ms (bandwidth: 4627.77 MB/s)
+loop 29 in 830.25 ms (bandwidth: 4817.84 MB/s)
+loop 30 in 929.70 ms (bandwidth: 4302.48 MB/s)
+
+
+Aufgabe 6
+Der Prozess wird gekillt, sobald er versucht mehr speicher zu allokieren, als verfügbar ist.
+
+Aufgabe 7: Keine Möglichkeit
