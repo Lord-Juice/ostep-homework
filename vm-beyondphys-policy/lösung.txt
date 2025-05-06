@@ -1,0 +1,128 @@
+Aufgabe 1:
+
+FIFO:
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 5  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 5  Hit/Miss?  State of Memory?  Hit
+
+Access: 1  Hit/Miss?  State of Memory?  Miss
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+
+Access: 9  Hit/Miss?  State of Memory?  Miss
+Access: 9  Hit/Miss?  State of Memory?  Hit
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Hit
+
+LRU:
+
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 5  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 5  Hit/Miss?  State of Memory?  Miss
+
+Access: 1  Hit/Miss?  State of Memory?  Miss
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+
+Access: 9  Hit/Miss?  State of Memory?  Miss
+Access: 9  Hit/Miss?  State of Memory?  Hit
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Hit
+
+OPT:
+
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 5  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 5  Hit/Miss?  State of Memory?  Hit
+
+Access: 1  Hit/Miss?  State of Memory?  Miss
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 2  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Miss
+Access: 4  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Hit
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+
+Access: 9  Hit/Miss?  State of Memory?  Miss
+Access: 9  Hit/Miss?  State of Memory?  Hit
+Access: 0  Hit/Miss?  State of Memory?  Miss
+Access: 0  Hit/Miss?  State of Memory?  Hit
+Access: 8  Hit/Miss?  State of Memory?  Miss
+Access: 7  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Miss
+Access: 3  Hit/Miss?  State of Memory?  Miss
+Access: 6  Hit/Miss?  State of Memory?  Hit
+Access: 6  Hit/Miss?  State of Memory?  Hit
+
+Aufgabe 2:
+FIFO Worst Case: Zahlenreihe 0-5. Cache = 6 Löst das problem, die Reihe 0-6 ist aber dann worst case.
+LRU Worst case: Auch eine Zahlenreihe 0-5. Jede Page wird gleich genutzt und jede page wird removed bevor sie gecalled wird.
+MRU: 0,1,2,3,4,5,4,5,4,5...
+Die alten Pages bleiben erhalten und die neuen werden rausgeschmissen, welche aber dann wieder geladen werden.
+
+Um OPT zu erreichen, muss der gesamte Workload in den Cache passen. Wird also durch 50 Pages gelooped wie im Buch, dann muss der Cache 50 Pages halten können.
+
+Aufgabe 3:
+[4, 0, 3, 4, 9, 2, 6, 0, 8, 4]
+Alle performen ähnlich, da Cache und Workload nicht groß sind.
+Aufgabe 4:
+Workload:
+[1,2,1,2,3,1,2,4,1,2,5,1,2,6]
+1-2 sind hot set
+3-6 sind distractions
+LRU: 8:6
+RAND: 8:6
+CLOCK
+
+CLOCK: 7:7
+Clock mit n Bits (immer das gleiche Ergebnis): 7:7
